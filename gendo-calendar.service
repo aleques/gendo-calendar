@@ -1,0 +1,13 @@
+[Unit]
+Description=Gendo Calendar Service
+After=network.target
+StartLimitIntervalSec=0
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=root
+ExecStart=/srv/gendo-calendar/gendo-calendar.sh
+
+[Install]
+WantedBy=multi-user.target
